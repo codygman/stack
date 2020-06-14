@@ -16,7 +16,7 @@ in
 }:
 
 # 'cabalProject' generates a package set based on a cabal.project (and the corresponding .cabal files)
-pkgs.haskell-nix.cabalProject {
+pkgs.haskell-nix.stackProject {
   # 'cleanGit' cleans a source directory based on the files known by git
   src = pkgs.haskell-nix.haskellLib.cleanGit { name = "haskell-nix-project"; src = ./.; };
   compiler-nix-name = haskellCompiler;
